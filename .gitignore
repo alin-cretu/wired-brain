@@ -1,0 +1,27 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore virtual environments
+product-service/venv/
+env/
+
+# Ignore dependency management files
+pip-log.txt
+pip-wheel-metadata/
+
+# Ignore environment variable files
+.env
+*.env
+
+# Ignore log files
+*.log
+debug.log
+
+# Ignore SQLite database files
+*.sqlite3
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
