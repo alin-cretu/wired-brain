@@ -15,10 +15,10 @@ class Product(db.Model):
         return cls.query.get(_id)
 
     @classmethod
-    def find_all(cls, _id):
-        return  cls.query.get(_id)
+    def find_all(cls):
+        return  cls.query.get()
 
-    def dave_to_db(self):
+    def save_to_db(self):
         db.session.add(self)
         db.session.commit()
 
