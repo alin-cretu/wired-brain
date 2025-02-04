@@ -1,4 +1,6 @@
 from flask import Flask, jsonify, request
+from db import db
+from Product import Product
 
 products = [
     {'id':1, 'name':'Product 1'},
@@ -6,6 +8,8 @@ products = [
 ]
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:password@db/products'
+db.init_app(app)
 
 # curl -v http://localhoast:5000/products
 @app.route('/products')
